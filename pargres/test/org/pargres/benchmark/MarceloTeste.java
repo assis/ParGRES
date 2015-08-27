@@ -1,4 +1,4 @@
-package org.pargres.parser;
+package org.pargres.benchmark;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import org.pargres.commons.Range;
 import org.pargres.commons.util.ParserException;
 import org.pargres.jdbc.PargresDatabaseMetaData;
+import org.pargres.parser.Q;
 import org.pargres.util.HsqlDatabase;
 import org.pargres.util.PargresNodeProcessor;
 import org.pargres.util.PargresClusterProcessor;
