@@ -1,7 +1,7 @@
 /*
  * QueryProcessorAdmin.java
  *
- * Created on 4 décembre 2003, 16:27
+ * Created on 4 decembre 2003, 16:27
  */
 
 package org.pargres.cqp;

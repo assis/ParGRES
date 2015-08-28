@@ -4,20 +4,30 @@
 package org.pargres.jdbc;
 
 import java.rmi.RemoteException;
+import java.sql.Array;
+import java.sql.Blob;
 import java.sql.CallableStatement;
+import java.sql.Clob;
 import java.sql.DatabaseMetaData;
+import java.sql.NClob;
 import java.sql.PreparedStatement;
+import java.sql.SQLClientInfoException;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
+import java.sql.SQLXML;
 import java.sql.Savepoint;
 import java.sql.Statement;
+import java.sql.Struct;
 import java.util.Map;
+import java.util.Properties;
+import java.util.concurrent.Executor;
 
 import org.pargres.commons.interfaces.ConnectionManager;
 import org.pargres.commons.translation.Messages;
 import org.pargres.commons.util.JdbcNotImplementedYetException;
 import org.pargres.commons.util.PargresException;
 import org.pargres.util.MyRMIRegistry;
+import org.pargres.commons.util.JdbcClientInfoNotImplementedYetException;
 
 
 /**
@@ -358,6 +368,96 @@ public class Connection implements java.sql.Connection {
      */
     public PreparedStatement prepareStatement(String arg0, String[] arg1) throws SQLException {
 		//logger.debug("PreparedStatement prepareStatement");
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public Clob createClob() throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public Blob createBlob() throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public NClob createNClob() throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public SQLXML createSQLXML() throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public boolean isValid(int timeout) throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public void setClientInfo(String name, String value) throws SQLClientInfoException {
+		throw new JdbcClientInfoNotImplementedYetException();
+    }
+
+    @Override
+    public void setClientInfo(Properties properties) throws SQLClientInfoException {
+		throw new JdbcClientInfoNotImplementedYetException();
+    }
+
+    @Override
+    public String getClientInfo(String name) throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public Properties getClientInfo() throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public Array createArrayOf(String typeName, Object[] elements) throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public Struct createStruct(String typeName, Object[] attributes) throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public void setSchema(String schema) throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public String getSchema() throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public void abort(Executor executor) throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public void setNetworkTimeout(Executor executor, int milliseconds) throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public int getNetworkTimeout() throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public <T> T unwrap(Class<T> iface) throws SQLException {
+		throw new JdbcNotImplementedYetException();
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> iface) throws SQLException {
 		throw new JdbcNotImplementedYetException();
     }
 

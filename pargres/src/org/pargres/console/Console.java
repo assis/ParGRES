@@ -45,7 +45,7 @@ public class Console {
 			ResultSet rs = con.createStatement().executeQuery(sql);			
 			ResultSetPrinter.print(rs,lines);
 		} else 
-			throw new Exception("SQL n„o pode ser executado: "+sql);
+			throw new Exception("SQL n√£o pode ser executado: "+sql);
 		long total = System.currentTimeMillis() - start;
 		System.out.println("Total elapsed time: "+total+" miliseconds.");
 	}

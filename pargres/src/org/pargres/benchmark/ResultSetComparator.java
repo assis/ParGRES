@@ -24,7 +24,7 @@ public class ResultSetComparator {
 		int count = 0;		
 		try {
 			if(rsA.getMetaData().getColumnCount() != rsB.getMetaData().getColumnCount())
-				throw new Exception("Número diferente de colunas: ResultSet A="+rsA.getMetaData().getColumnCount()+", ResultSet B="+rsB.getMetaData().getColumnCount());
+				throw new Exception("NÃºmero diferente de colunas: ResultSet A="+rsA.getMetaData().getColumnCount()+", ResultSet B="+rsB.getMetaData().getColumnCount());
 			
 			for(int j = 1; j <= rsA.getMetaData().getColumnCount(); j++)
 				if(!rsA.getMetaData().getColumnName(j).equalsIgnoreCase(rsB.getMetaData().getColumnName(j)))
@@ -32,7 +32,7 @@ public class ResultSetComparator {
 				
 			while(rsA.next()) {
 				if(!rsB.next())
-					throw new Exception("Número diferente de registros: ResultSet B parou em: "+count);
+					throw new Exception("NÃºmero diferente de registros: ResultSet B parou em: "+count);
 				
 				for(int j = 1; j <= rsA.getMetaData().getColumnCount(); j++) {
 					if(!rsA.getString(j).equals(rsB.getString(j))) {
@@ -45,7 +45,7 @@ public class ResultSetComparator {
 							if(dif < 0)
 								dif *= -1;
 							if(dif > 0.1)
-								throw new Exception("Valor errado do resultado.. fora da precisão (linha "+count+") : campo "+rsA.getMetaData().getColumnName(j)+", A="+rsA.getDouble(j)+", B="+rsB.getDouble(j));
+								throw new Exception("Valor errado do resultado.. fora da precisï¿½o (linha "+count+") : campo "+rsA.getMetaData().getColumnName(j)+", A="+rsA.getDouble(j)+", B="+rsB.getDouble(j));
 						}
 						else 
 							throw new Exception("Valor errado do resultado (linha "+count+") : campo "+rsA.getMetaData().getColumnName(j)+", A="+rsA.getDouble(j)+", B="+rsB.getDouble(j));												
@@ -54,7 +54,7 @@ public class ResultSetComparator {
 				count++;
 			}		
 			if(rsB.next())
-				throw new Exception("Número diferente de registros: ResultSet A ainda tem mais registros do que "+count);
+				throw new Exception("Nï¿½mero diferente de registros: ResultSet A ainda tem mais registros do que "+count);
 			
 		} catch (Exception e) {
 			if(count > lines)

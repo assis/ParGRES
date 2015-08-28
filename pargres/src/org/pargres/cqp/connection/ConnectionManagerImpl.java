@@ -112,7 +112,7 @@ public class ConnectionManagerImpl implements ConnectionManager {
 
     private void register() throws PargresException {
         try {
-			//A comunicaÁ„o via RMI È quase t„o r·pida quanto via socket
+			//A comunica√ß√£o via RMI √© quase t√£o r√°pida quanto via socket
 			//http://martin.nobilitas.com/java/thruput.html			
 	    	MyRMIRegistry.bind(port,getRmiAddress(),this);
 			logger.info(Messages.getString("connectionManagerImpl.register",new Object[]{port,getRmiAddress()}));
