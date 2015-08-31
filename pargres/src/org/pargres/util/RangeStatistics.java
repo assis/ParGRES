@@ -1,7 +1,7 @@
 /*
  * RelationStatistics.java
  *
- * Created on 9 février 2004, 13:40
+ * Created on 9 fevrier 2004, 13:40
  */
 
 package org.pargres.util;

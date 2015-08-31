@@ -174,7 +174,7 @@ public class QueryScheduler implements Runnable {
 	}
 	
 	public int executeUpdate(AbstractQueryManager s) throws RemoteException, SQLException {
-		//Isto é thread-safe?		
+		//Isto e thread-safe?		
 		put(s);
 		int count = -1;
 		try {
@@ -190,7 +190,7 @@ public class QueryScheduler implements Runnable {
 	}	
 	
 	public ResultSet executeQuery(AbstractQueryManager s) throws RemoteException, SQLException {
-		//Isto é thread-safe?
+		//Isto e thread-safe?
 		put(s);
 		ResultSet rs = null;
 		try {		

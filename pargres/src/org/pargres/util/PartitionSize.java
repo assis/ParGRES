@@ -1,7 +1,7 @@
 /*
  * PartitionSize.java
  *
- * Created on 19 février 2004, 15:22
+ * Created on 19 fevrier 2004, 15:22
  */
 
 package org.pargres.util;

@@ -1,7 +1,7 @@
 /*
  * Node.java
  *
- * Created on 11 février 2004, 16:21
+ * Created on 11 fevrier 2004, 16:21
  */
 
 package org.pargres.util;

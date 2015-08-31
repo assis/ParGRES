@@ -1,7 +1,7 @@
 /*
  * ResultComposer.java
  *
- * Created on 17 décembre 2003, 11:32
+ * Created on 17 decembre 2003, 11:32
  */
 
 package org.pargres.resultcomposer;

@@ -17,11 +17,11 @@ import org.pargres.util.RangeStatistics;
  * @author Bernardo
  */
 public class QueryPlanner {
-	// Marcelo, troquei os parâmetros do parser. Estou passando o metadata todo.
+	// Marcelo, troquei os parametros do parser. Estou passando o metadata todo.
 	// Seguindo
-	// o padrão do JDBC, não é possível fazer uma busca por informações de
+	// o padrao do JDBC, nao e possivel fazer uma busca por informacoes de
 	// colunas sem
-	// antes informar qual é a tabela que contem essas colunas.
+	// antes informar qual e a tabela que contem essas colunas.
 	public static QueryInfo parser(String sql,
 			PargresDatabaseMetaData meta, int numNQPs) throws ParserException {
 

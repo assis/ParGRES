@@ -1,7 +1,7 @@
 /*
  * OlapClusterServer.java
  *
- * Created on 15 décembre 2003, 17:27
+ * Created on 15 decembre 2003, 17:27
  */
 
 package org.pargres.nodequeryprocessor;

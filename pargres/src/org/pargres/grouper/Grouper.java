@@ -1,7 +1,7 @@
 /*
  * Grouper.java
  *
- * Created on 12 décembre 2003, 15:32
+ * Created on 12 decembre 2003, 15:32
  */
 
 package org.pargres.grouper;

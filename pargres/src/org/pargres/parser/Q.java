@@ -90,7 +90,7 @@ public class Q {
 	
 	public ArrayList<String> getAttributesQuery() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getAttributesQuery()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getAttributesQuery()\"."));
 		return parser.getWhereAttList();
 	}
 	
@@ -117,42 +117,42 @@ public class Q {
 			if( !(error.equals("")) )
 					throw(new ParserException(error));			
 		}
-		else throw(new ParserException("A tabela "+table+" não é candidata a fragmentação para esta consulta."));		
+		else throw(new ParserException("A tabela "+table+" nao e candidata a fragmentacao para esta consulta."));		
 	}
 	
 	public String getVpQuery() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getVpQuery()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getVpQuery()\"."));
 		return parser.getVpQuery();
 	}
 		
 	public Object[] getVpGroupByList() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getVpGroupByList()\"."));		
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getVpGroupByList()\"."));		
 		return parser.getGroupByList();
     }
 	
 	public ArrayList<Column> getQvpColumnsList() throws ParserException{
 	   	if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getQvpColumnsList()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getQvpColumnsList()\"."));
 		return parser.getQvpColumnsList();
     }
 	
 	public int getSelectAggregationFunctionCount() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getSelectAggregationFunctionCount()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getSelectAggregationFunctionCount()\"."));
 		return parser.getSelectAggregationFunctionCount();
 	}
 	
 	public Object[][] getSelectCompositor() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getSelectCompositor()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getSelectCompositor()\"."));
 	    return parser.getSelectCompositor();
 	}
 	
 	public ArrayList<String> getAliasTextList() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getAliasCompositor()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getAliasCompositor()\"."));
 	    if(isFromClauseInnerSelect){
 			returnAliasTextList = parser.getAliasTextList();
 			for(int i=0; i<fromSelectAliasTextList.size();i++){
@@ -166,48 +166,48 @@ public class Q {
 	
 	public Object[] getHavingCompositor() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getHavingCompositor()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getHavingCompositor()\"."));
         return parser.getHavingCompositor();
     }	
 	public OrderByRef[] getOrderByIndexList() throws ParserException{
 		if(!setVpQueryWasCalled)
-				throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getOrderByIndexList()\"."));
+				throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getOrderByIndexList()\"."));
 	     return parser.getOrderByIndexList();
 	}
 	
     public ArrayList<String> getGroupByTextList() throws ParserException{
 		   	if(!setVpQueryWasCalled)
-				throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getGroupByTextList()\"."));
+				throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getGroupByTextList()\"."));
 			return parser.getGroupByTextList();
 	}
 
     public ArrayList<String> getOrderByTextList() throws ParserException{
 	   	if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getOrderByTextList()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getOrderByTextList()\"."));
 		return parser.getOrderByTextList();
     }	
 	
 	public ArrayList<String> getSelectTextList() throws ParserException{
 		   	if(!setVpQueryWasCalled)
-				throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getSelectTextList()\"."));
+				throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getSelectTextList()\"."));
 			return parser.getSelectTextList();
 	 }
 	
 	public int getQvpCount() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getQvpCount()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getQvpCount()\"."));
 		return parser.getQvpCount();
 	}	
 	
 	public String getLimitText() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getLimitText()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getLimitText()\"."));
 		return parser.getLimitText();
 	}	
 
 	public String getAllOrDistinctText() throws ParserException{
 		if(!setVpQueryWasCalled)
-			throw(new ParserException("O método \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getAllOrDistinctText()\"."));
+			throw(new ParserException("O metodo \"Q.setVpQuery(String table)\" deve ser executado antes de \"Q.getAllOrDistinctText()\"."));
 		return parser.getAllOrDistinctText();
 	}
 	

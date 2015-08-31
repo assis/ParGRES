@@ -1,7 +1,7 @@
 /*
  * PartitionTuner.java
  *
- * Created on 6 février 2004, 14:35
+ * Created on 6 fevrier 2004, 14:35
  */
 
 package org.pargres.util;
