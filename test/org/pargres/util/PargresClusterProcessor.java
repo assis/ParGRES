@@ -45,7 +45,7 @@ public class PargresClusterProcessor {
 					//System.out.println("SmaqClusterProcessor running...");
 					socket.close();
 				} catch (Exception e) {
-					System.err.println("O SmaqClusterProcessor não foi inicializado: " + e);
+					System.err.println("O SmaqClusterProcessor nao foi inicializado: " + e);
 				}		
 		    }
     

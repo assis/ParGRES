@@ -53,7 +53,7 @@ public class PargresNodeProcessor {
             socket.close();
         } catch (Exception e) {
             System.err
-                    .println("O SmaqNodeProcessor não foi inicializado: " + e);
+                    .println("O SmaqNodeProcessor nao foi inicializado: " + e);
             e.printStackTrace();
         }
     }

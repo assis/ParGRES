@@ -32,8 +32,8 @@ public class HSQLDBConnectionTest {
         boolean autocommit = false;
 
         Class.forName("org.hsqldb.jdbcDriver");
-        System.out.println("nº de registros inseridos " + N);
-        System.out.println("nº de repeticoes " + repeticoes);
+        System.out.println("no de registros inseridos " + N);
+        System.out.println("no de repeticoes " + repeticoes);
         System.out.println("temporary " + temporary);
         System.out.println("autocommit " + autocommit);
 
@@ -67,8 +67,8 @@ public class HSQLDBConnectionTest {
             stmt.close();
             con.close();
 
-            System.out.println("Tempo médio Inserção: " + tempoInsercao / repeticoes);
-            System.out.println("Tempo médio drop: " + tempoClose / repeticoes);
+            System.out.println("Tempo medio Insercao: " + tempoInsercao / repeticoes);
+            System.out.println("Tempo medio drop: " + tempoClose / repeticoes);
         } else {
             for (int j = 1; j <= repeticoes; ++j) {
                 Connection con1 = DriverManager.getConnection(
@@ -100,8 +100,8 @@ public class HSQLDBConnectionTest {
                 tempoClose = tempoClose + (end - begin);
             }
 
-            System.out.println("Tempo médio Inserção: " + tempoInsercao / repeticoes);
-            System.out.println("Tempo médio drop: " + tempoClose / repeticoes);
+            System.out.println("Tempo medio Insercao: " + tempoInsercao / repeticoes);
+            System.out.println("Tempo medio drop: " + tempoClose / repeticoes);
         }
     }
 

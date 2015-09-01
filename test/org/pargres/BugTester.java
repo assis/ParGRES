@@ -42,7 +42,7 @@ public class BugTester extends TestCase {
 		while (rs2.next())
 		  System.out.println("COUNT: " + rs2.getString(1));
 		
-		//Com where NÃO funciona		
+		//Com where NAO funciona		
 		/*String sql3 = "SELECT L_QUANTITY FROM LINEITEM WHERE L_ORDERKEY < 500";
 		ResultSet rs3 = con.createStatement().executeQuery(sql2);
 		assertNotNull(rs3);*/

@@ -1,6 +1,6 @@
 package org.pargres.benchmark;
 
-import java.sql.ResultSet;
+import java.sql.ResultSet; 
 import java.sql.SQLException;
 import java.sql.Types;
 

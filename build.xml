@@ -3,7 +3,9 @@
 	<property file="build.properties"/>	
 
 	<property name="bin" value="bin"/>
+	<property name="bintest" value="bintest"/>
 	<property name="src" value="src"/>
+	<property name="test" value="test"/>
 	<property name="lib" value="lib"/>
 	<property name="build" value="build"/>
 	<property name="config" value="config"/>
@@ -14,6 +16,7 @@
 	<property name="dist.name" value="pargres-0.1"/>
 	<property name="jdbcDriver" value="pargres-jdbc-client.jar"/>
 	<property name="pargresServerJarFile" value="pargres-server.jar"/>
+	<property name="pargresTestsJarFile" value="pargres-tests.jar"/>
 	<property name="pargresAdminJarFile" value="pargresadmin.jar"/>	
 	<property name="pargresAdminWarFile" value="pargresadmin.war"/>
 	<property name="clusterUrl" value="{sshusername}@${host}:~/${dist.name}"/>
@@ -23,7 +26,17 @@
 			<include name="*.jar"/>
 		</fileset>
 	</path>
-
+        
+	<path id="classpathtest">
+                <pathelement location="bin"/>
+		<fileset dir="${lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${lib}/junit_4">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+        
 	<target name="init">
 		<delete file="${build}"/>
 		<mkdir dir="${build}"/>
@@ -38,6 +51,10 @@
   		classpathref="classpath"
   		srcdir="${config}"
   		destdir="${bin}"/>
+		<javac 
+  		classpathref="classpathtest"
+  		srcdir="${test}"
+  		destdir="${bintest}"/>
 	</target>
 
 	<target name="jar.client.create">
@@ -56,6 +73,11 @@
 		</jar>
 	</target>
 	
+	<target name="jar.tests.create">
+		<jar destfile="${build}/${pargresTestsJarFile}" basedir="${bintest}">
+		</jar>
+	</target>
+        
 	<target name="javadoc.create">
 		<delete dir="${build}/docs/ap"/>
 		<javadoc
@@ -78,7 +100,8 @@
 	</javadoc>
 	</target>
 	
-	<target name="all" depends="init,compile,jar.client.create,jar.server.create,installer.console.remotecopy"/>
+	<!--target name="all" depends="init,compile,jar.client.create,jar.server.create,installer.console.remotecopy"/-->
+	<target name="all" depends="init,compile,jar.client.create,jar.server.create,jar.tests.create"/>
 	
 	<target name="parser.run">
 	<exec dir="${src}/org/pargres/parser" executable="${lib}/yacc.exe">
@@ -184,7 +207,7 @@
 		</move>
 	</target>	
 	
-	<target name="installer.console.remotecopy">
+	<!--target name="installer.console.remotecopy">
 		<scp password="${sshpassword}" todir="${sshusername}@${host}:~/" trust="on">
 			<fileset dir="${build}">
 				<include name="${dist.name}.tar.gz"/>
@@ -192,7 +215,7 @@
 		</scp>
 
 		<sshexec host="${host}" username="${sshusername}" password="${sshpassword}" command="gunzip ${dist.name}.tar.gz; tar -xvvf ${dist.name}.tar; rm ${dist.name}.tar; dos2unix ${dist.name}/bin/*.sh;chmod +x ${dist.name}/bin/*.sh" trust="yes"/>
-    </target>
+        </target-->
 	
 	<!--START: Needs to be costumized-->
 

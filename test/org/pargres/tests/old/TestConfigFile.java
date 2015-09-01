@@ -1,7 +1,7 @@
 /*
  * TestConfigFile.java
  *
- * Created on 16 février 2004, 16:49
+ * Created on 16 fevrier 2004, 16:49
  */
 
 package org.pargres.tests.old;

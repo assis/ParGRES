@@ -26,7 +26,7 @@ public class HSQLDBOrderTest {
         int N = 100000;
 
         Class.forName("org.hsqldb.jdbcDriver");
-        System.out.println("nº de registros inseridos " + N);
+        System.out.println("no de registros inseridos " + N);
 
         Connection con = DriverManager.getConnection("jdbc:hsqldb:mem:tempdb",
                 "sa", "");
