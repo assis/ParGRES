@@ -112,7 +112,7 @@
 	</target>
 	
 	<!--target name="all" depends="init,compile,jar.client.create,jar.server.create,installer.console.remotecopy"/-->
-	<target name="all" depends="init,compile,jar.client.create,jar.server.create,jar.tests.create"/>
+	<target name="all" depends="init,compile,jar.client.create,jar.server.create,jar.tests.create,installer.console.create"/>
 	
 	<target name="parser.run">
 	<exec dir="${src}/org/pargres/parser" executable="${lib}/yacc.exe">
@@ -169,10 +169,10 @@
 	    <taskdef name="izpack" classpath="${build}/IzPack/lib/compiler.jar"
 		     classname="com.izforge.izpack.ant.IzPackTask"/>
 		     		
-	    <izpack input="install.xml"
+	    <izpack input="${basedir}/install.xml"
 		    output="${build}/${dist.name}-GuiInstaller.jar"
 		    basedir="."
-		    izPackDir="${build}/IzPack">
+		    izPackDir="${basedir}/${build}/IzPack">
 	    	<property name="preparedDir" value="${build}/${dist.name}"/>
 	    </izpack>
 	</target>
