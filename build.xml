@@ -44,17 +44,28 @@
 
 	<target name="compile">
 		<javac 
-  		classpathref="classpath"
-  		srcdir="${src}"
-  		destdir="${bin}"/>
+                    includeantruntime="false"
+                    classpathref="classpath"
+                    srcdir="${src}"
+                    destdir="${bin}"/>
 		<javac 
-  		classpathref="classpath"
-  		srcdir="${config}"
-  		destdir="${bin}"/>
+                    includeantruntime="false"
+                    classpathref="classpath"
+                    srcdir="${config}"
+                    destdir="${bin}"/>
 		<javac 
-  		classpathref="classpathtest"
-  		srcdir="${test}"
-  		destdir="${bintest}"/>
+                    includeantruntime="false"
+                    classpathref="classpathtest"
+                    srcdir="${test}"
+                    destdir="${bintest}"/>
+	</target>
+
+	<target name="clean">
+            <delete includeemptydirs="true">
+                <fileset dir="${build}" includes="**/*"/>
+                <fileset dir="${bintest}" includes="**/*"/>
+                <fileset dir="${bin}" includes="**/*"/>
+            </delete>                
 	</target>
 
 	<target name="jar.client.create">

@@ -30,6 +30,13 @@ auxiliary.show.customizer.message=<message>
                 <action name="javadoc">
                     <target>javadoc.create</target>
                 </action>
+                <action name="clean">
+                    <target>clean</target>
+                </action>
+                <action name="rebuild">
+                    <target>clean</target>
+                    <target>all</target>
+                </action>
             </ide-actions>
             <view>
                 <items>
@@ -47,6 +54,8 @@ auxiliary.show.customizer.message=<message>
                 </items>
                 <context-menu>
                     <ide-action name="build"/>
+                    <ide-action name="rebuild"/>
+                    <ide-action name="clean"/>
                     <ide-action name="javadoc"/>
                 </context-menu>
             </view>
